@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { ajouterProduit } from "../redux/panierSlice";
 
 const Albums = () => {
   const [albums, setAlbums] = useState([]); // État pour stocker les albums
@@ -26,6 +28,12 @@ const Albums = () => {
 
     fetchAlbums();
   }, []);
+
+  const dispatch = useDispatch();
+
+  const ajouterAuPanier = (album) => {
+    dispatch(ajouterProduit(album));
+  };
 
   // Si en cours de chargement, afficher un spinner ou un message
   if (loading) {
@@ -56,7 +64,11 @@ const Albums = () => {
               <td>{album.title}</td>
               <td>{album.id} €</td>
               <td>
-                <button type="button" className="btn btn-success">
+                <button
+                  type="button"
+                  className="btn btn-success"
+                  onClick={() => ajouterAuPanier(album)}
+                >
                   Ajouter au panier
                 </button>
               </td>

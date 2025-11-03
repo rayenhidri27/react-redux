@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const listePanier = useSelector((state) => state.panier.produits);
   return (
     <nav className="navbar navbar-expand-lg bg-info">
       <div className="container">
@@ -63,9 +65,15 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <button type="button" class="btn btn-primary">
-                Panier <span class="badge text-bg-danger">xx</span>
-              </button>
+              <NavLink
+                className="nav-link me-2"
+                aria-current="page"
+                to="/panier"
+              >
+                <button type="button" class="btn btn-primary">
+                  Panier <span class="badge text-bg-danger">{listePanier.length}</span>
+                </button>
+              </NavLink>
             </li>
           </ul>
         </div>

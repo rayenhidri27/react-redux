@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Users from "./components/Users";
 import User from "./components/User";
 import Albums from "./components/Albums";
+import Panier from "./components/Panier";
 
 // Définir les routes avec createBrowserRouter
 const router = createBrowserRouter([
@@ -13,12 +14,13 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />, // Utilisation de RootLayout comme parent
     children: [
-      { index: true, element: <Accueil /> }, // Route d'accueil par défaut
-      { path: "albums", element: <Albums /> }, // Route À propos
-      { path: "about", element: <About /> }, // Route À propos
-      { path: "contact", element: <Contact /> }, // Route Contact
-      { path: "users", element: <Users /> }, // Route Contact
-      { path: "users/:id", element: <User /> }, // Route Contact
+      { index: true, element: <Accueil /> },
+      { path: "albums", element: <Albums /> },
+      { path: "panier", element: <Panier /> },
+      { path: "about", element: <About /> },
+      { path: "contact", element: <Contact /> },
+      { path: "users", element: <Users /> },
+      { path: "users/:id", element: <User /> },
     ],
   },
 ]);
