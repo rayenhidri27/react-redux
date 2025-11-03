@@ -7,7 +7,7 @@ const RootLayout = () => {
   return (
     <div>
       <Header />
-      <main className="container">
+      <main className="container mt-5 mb-5">
         {/* Contenu des routes enfants */}
         <Outlet />
       </main>

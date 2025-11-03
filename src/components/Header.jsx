@@ -21,12 +21,17 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
+              <NavLink className="nav-link me-2" aria-current="page" to="/">
+                Accueil
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink
                 className="nav-link me-2"
                 aria-current="page"
-                to="/"
+                to="/albums"
               >
-                Accueil
+                Albums
               </NavLink>
             </li>
             <li className="nav-item">
@@ -56,6 +61,11 @@ const Header = () => {
               >
                 Contact
               </NavLink>
+            </li>
+            <li className="nav-item">
+              <button type="button" class="btn btn-primary">
+                Panier <span class="badge text-bg-danger">xx</span>
+              </button>
             </li>
           </ul>
         </div>
