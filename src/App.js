@@ -3,6 +3,8 @@ import RootLayout from "./RootLayout"; // Import du layout principal
 import Accueil from "./pages/Accueil";
 import Contact from "./pages/Contact";  
 import About from "./pages/About";
+import Users from "./components/Users";
+import User from "./components/User";
 
 
 
@@ -15,6 +17,8 @@ const router = createBrowserRouter([
       { index: true, element: <Accueil /> }, // Route d'accueil par défaut
       { path: "about", element: <About /> }, // Route À propos
       { path: "contact", element: <Contact /> }, // Route Contact
+      { path: "users", element: <Users /> }, // Route Contact
+      { path: "users/:id", element: <User /> }, // Route Contact
     ],
   },
 ]);
