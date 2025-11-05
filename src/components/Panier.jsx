@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { supprimerProduit } from "../redux/panierSlice";
+import { supprimerProduit, viderPanier } from "../redux/panierSlice";
 
 const Panier = () => {
   const listePanier = useSelector((state) => state.panier.produits);
@@ -23,6 +23,7 @@ const Panier = () => {
         ))}
       </ul>
       <h3>Total : {total}</h3>
+      <button type="button" class="btn btn-danger btn-md" onClick={() => dispatch( viderPanier())}>Vider le panier</button>
     </div>
   );
 };

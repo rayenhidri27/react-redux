@@ -21,8 +21,12 @@ const panierSlice = createSlice({
       // je prends l'id comme prix : simulation
       state.total -= action.payload;
     },
+    viderPanier: (state) => {
+      state.produits = []; // Vider le panier
+      state.total = 0;     // Remettre le total à 0
+    }
   },
 });
 
-export const { ajouterProduit, supprimerProduit } = panierSlice.actions;
+export const { ajouterProduit, supprimerProduit, viderPanier } = panierSlice.actions;
 export default panierSlice.reducer;
