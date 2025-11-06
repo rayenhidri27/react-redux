@@ -31,10 +31,6 @@ const Albums = () => {
 
   const dispatch = useDispatch();
 
-  const ajouterAuPanier = (album) => {
-    dispatch(ajouterProduit(album));
-  };
-
   // Si en cours de chargement, afficher un spinner ou un message
   if (loading) {
     return <p>Chargement des albums...</p>;
@@ -67,7 +63,7 @@ const Albums = () => {
                 <button
                   type="button"
                   className="btn btn-success"
-                  onClick={() => ajouterAuPanier(album)}
+                  onClick={() => dispatch(ajouterProduit(album))}
                 >
                   Ajouter au panier
                 </button>
