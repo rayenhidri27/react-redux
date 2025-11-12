@@ -23,7 +23,7 @@ const Users = () => {
   return (
     <div className="container mt-3">
       <h1>Liste des users</h1>
-      <table class="table">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">#</th>
