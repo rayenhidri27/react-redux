@@ -56,7 +56,7 @@ const Albums = () => {
         <tbody>
           {albums.map((album) => (
             <tr key={album.id}>
-              <th scope="row">1</th>
+              <th scope="row">{album.id}</th>
               <td>{album.title}</td>
               <td>{album.id} €</td>
               <td>
