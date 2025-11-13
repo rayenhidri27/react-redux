@@ -7,6 +7,7 @@ import Users from "./components/Users";
 import User from "./components/User";
 import Albums from "./components/Albums";
 import Panier from "./components/Panier";
+import ContactWithZod from "./pages/ContactWithZod";
 
 // Définir les routes avec createBrowserRouter
 const router = createBrowserRouter([
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: "panier", element: <Panier /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
+      { path: "contact-with-zod", element: <ContactWithZod /> },
       { path: "users", element: <Users /> },
       { path: "users/:id", element: <User /> },
     ],

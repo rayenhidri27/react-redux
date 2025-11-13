@@ -68,6 +68,15 @@ const Header = () => {
               <NavLink
                 className="nav-link me-2"
                 aria-current="page"
+                to="/contact-with-zod"
+              >
+                Contact with Zod
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link me-2"
+                aria-current="page"
                 to="/panier"
               >
                 <button type="button" class="btn btn-primary">
